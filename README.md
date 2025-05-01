@@ -13,10 +13,19 @@ The goal is to detect spoofed audio using the ASVspoof2019 dataset, which contai
 - **Evaluation**: Reports precision, recall, F1-score, and confusion matrix for development and test sets.
 - **Testing**: Supports classification of individual audio files using the trained model.
 
-### Results
+## Results (Development Set)
 - **Development Set (1000 samples, 500 spoof, 500 bonafide)**:
-  - Accuracy: 99%
-  - Precision: 99% (spoof), 100% (bonafide)
-  - Recall: 100% (spoof), 99% (bonafide)
-  - F1-Score: 99% (both classes)
-  - Confusion Matrix:
+
+| Metric          | Spoof | Bonafide | Overall |
+|-----------------|-------|----------|---------|
+| Accuracy        | -     | -        | 99%     |
+| Precision       | 99%   | 100%     | -       |
+| Recall          | 100%  | 99%      | -       |
+| F1-Score        | 99%   | 99%      | -       |
+
+### Confusion Matrix (500 spoof, 500 bonafide):
+
+|                | Predicted Spoof | Predicted Bonafide |
+|----------------|-----------------|--------------------|
+| **Actual Spoof** | 498             | 2                  |
+| **Actual Bonafide** | 5               | 495                |
